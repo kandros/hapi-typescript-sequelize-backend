@@ -4,7 +4,7 @@ import * as path from 'path'
 
 export function init(server: Hapi.Server) {
 
-    glob.sync('**/*route.ts', {
+    glob.sync('**/*-route.*', {
         cwd: __dirname
     }).forEach(file => {
         const route = require(path.join(__dirname, file)).default
